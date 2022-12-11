@@ -68,7 +68,6 @@ public class executeTest {
 		    	int nosteps = fr.getNoOfSteps(fileDir, testCase);
 		    	for(int y = 1; y <= nosteps ; y++) {
 		    		testStep = fr.getTestStep(fileDir, testCase, y);
-		    		System.out.println("StepName: " + testStep.getStepName());
 		    		if(testStep.getStepName().isBlank()==false) {
 		    			int rowStart = fr.getStartRowAction(fileDir, testStep);
 		    			int noaction = fr.getNoOfAction(fileDir, testStep, rowStart);

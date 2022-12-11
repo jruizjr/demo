@@ -139,7 +139,6 @@ public class FileReader {
 			}
 			wb.close();
 			inputStream.close();
-			System.out.println("rowCount: " + rowCount);
 			return rowCount;		
 		} catch (IOException e){
 			System.out.println(e);
