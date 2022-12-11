@@ -12,12 +12,12 @@ public class BaseElement {
 		LABEL("testelements.Label");
 	}*/
 	
-	protected WebDriver driver;
+	protected static WebDriver driver;
 	protected WebElement webElement;
 	
 	protected final Logger logger = Logger.getLogger(this.getClass());
 	
 	public BaseElement(WebDriver driver) {
-		this.driver = driver;
+		BaseElement.driver = driver;
 	}
 }

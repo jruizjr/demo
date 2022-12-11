@@ -7,8 +7,6 @@ import java.util.Map;
 public class TestStep {
 	String testStepName;
 	
-	Map<String, String> paramMap;
-	
 	List<TestAction> testActions = new ArrayList<TestAction>();
 	
 	public TestStep(String stepName) {

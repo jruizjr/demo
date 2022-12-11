@@ -1,16 +1,22 @@
 package model;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TestCase {
 	String testCaseName;
+	int noOfSteps;
 	String status;
 	
 	long startTime;
 	long endTime;
 	
-	Map<String, TestStep> testStepMap =  new LinkedHashMap<String, TestStep>();
+	List<TestStep> testStep = new ArrayList<TestStep>();
+	
+	
+	public TestCase(String testCaseName) {
+		this.testCaseName = testCaseName;
+	}
 	
 	public String getTestCaseName() {
 		return testCaseName;
@@ -18,6 +24,14 @@ public class TestCase {
 	
 	public void setTestCaseName(String testCaseName) {
 		this.testCaseName = testCaseName;
+	}
+	
+	public int getNoOfSteps() {
+		return noOfSteps;
+	}
+	
+	public void setNoOfSteps(int noOfSteps) {
+		this.noOfSteps = noOfSteps;
 	}
 	
 	public String getStatus() {
@@ -42,5 +56,13 @@ public class TestCase {
 	
 	public void setEndTime(long endTime) {
 		this.endTime = endTime;
+	}
+	
+	public void addTestStep(TestStep testStep) {
+		this.testStep.add(testStep);
+	}
+	
+	public List<TestStep> getTestSteps(){
+		return testStep;
 	}
 }
