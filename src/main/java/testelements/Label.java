@@ -42,7 +42,7 @@ public class Label extends BaseElement{
 			WebDriverWait wait = new WebDriverWait(driver, 60000);
 			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(".//div[contains(@class,'popup modal')]//*[contains(text(),'Sending Feedback')]")));
 			actualLabel = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator))).getText();
-			if(actualLabel.equalsIgnoreCase(testAction.getData())==true){
+			if(actualLabel.contains(testAction.getData())==true){
 				status = "Pass";
 			} else status = "Fail";
 			return status;

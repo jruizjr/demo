@@ -132,12 +132,14 @@ public class FileReader {
 					XSSFCell cell = sh.getRow(tempRow).getCell(colNum, MissingCellPolicy.CREATE_NULL_AS_BLANK);
 					if(cell == null || cell.getStringCellValue().equalsIgnoreCase("") == true) {
 						chk = false;
+						break;
 					}
 				} else break;
 				rowCount++;tempRow++;
 			}
 			wb.close();
 			inputStream.close();
+			System.out.println("rowCount: " + rowCount);
 			return rowCount;		
 		} catch (IOException e){
 			System.out.println(e);
